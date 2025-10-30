@@ -13,6 +13,7 @@ html {
 body {
     font-family: 'Cormorant Garamond', serif;
     background-color: #e4f7f4;
+    font-size: 14px; /* Smaller base font size for mobile */
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -32,7 +33,7 @@ p {
     background-size: cover;
     background-position: center;
     height: 100vh;
-    padding: 0 100px;
+    padding: 0 20px; /* Reduced padding for mobile */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -42,21 +43,22 @@ p {
     position: relative;
 }
 .hero-image h1{
-    font-size: 50px;
-    margin-bottom: 20px;
+    font-size: 28px; /* Smaller font for mobile */
+    margin-bottom: 15px;
 }
 .hero-image p{
-    font-size: 20px;
-    margin-bottom: 40px;
+    font-size: 16px; /* Smaller font for mobile */
+    margin-bottom: 30px;
 }
 
 .hero-image div{
     display: flex;
-    gap: 20px;
+    gap: 15px;
+    flex-wrap: wrap; /* Allow wrapping on small screens */
 }
 .hero-image button{
     border: 2px solid #fdffff;
-    padding: 10px 20px;
+    padding: 12px 24px; /* Touch-friendly padding */
     background-color: rgba(0, 0, 0, 0.3);
     color: #fdffff;
     font-size: inherit;
@@ -65,6 +67,7 @@ p {
     border-radius: 10px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    min-height: 44px; /* Touch-friendly minimum height */
 }
 .hero-image button:hover{
     background-color: #043a3a;
@@ -75,90 +78,130 @@ p {
 /* <!-- HEADER + NAVIGATION --> */
 
 header{
-    width: 80%;
+    width: 100%; /* Full width for mobile */
     margin: 0 auto;
-    border-radius: 10px;
-    display: grid;
-    grid-template-rows: auto;
-    grid-template-columns: 1fr 2fr 1fr;
-    padding: 14px 20px;
+    border-radius: 0; /* Remove border radius for mobile */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px; /* Reduced padding for mobile */
     color: #fdffff;
-    position:absolute;
-    top: 30px;
+    position: fixed; /* Fixed position for consistent visibility */
+    top: 0;
     left: 0;
     right: 0;
     z-index: 1000;
-    background: rgba(0, 0, 0, 0.3);
+    background: rgba(0, 0, 0, 0.8); /* More opaque for better visibility */
     backdrop-filter: blur(10px);
-    
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 nav ul {
     list-style-type: none;
     margin: 0;
-    padding: 5px;
+    padding: 0;
     display: flex;
-    gap: 20px;
+    gap: 15px;
     text-align: center;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.9);
+    flex-direction: column;
+    transform: translateY(-100%);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+nav ul.show {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
 }
 
 nav a {
     color: #fdffff;
     text-decoration: none;
     transition: color 0.3s ease;
-    font-size: 20px; 
+    font-size: 16px; /* Smaller font for mobile */
     font-weight: bolder;
+    padding: 10px 15px;
+    display: block;
 }
 nav a:hover {
-    color: #0fd0d0; 
+    color: #0fd0d0;
 }
 nav a.active {
-    color: #0fd0d0; 
+    color: #0fd0d0;
 }
 
 .logo{
-    text-align: center;
-    font-size: 20px;
+    font-size: 18px; /* Smaller font for mobile */
     font-weight: bolder;
+    flex-shrink: 0;
 }
+
 .cart-btn{
-    text-align: right;
     background: transparent;
+    flex-shrink: 0;
 }
+
 .cart-btn i{
-    text-align: right;
-    font-size: 20px;
-    padding: 5px;
+    font-size: 18px; /* Smaller icon for mobile */
+    padding: 8px;
     cursor: pointer;
     color: #fdffff;
     transition: color 0.3s ease;
+}
+
+.hamburger {
+    display: block;
+    background: transparent;
+    border: none;
+    color: #fdffff;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 8px;
+    flex-shrink: 0;
+}
+
+.hamburger span {
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: #fdffff;
+    margin: 4px 0;
+    transition: 0.3s;
 }
 
 /* BRANDS */
 
 #brands {
     overflow: hidden;
+    padding: 20px 0; /* Reduced padding for mobile */
 }
 
 .heading {
     color: #043a3a;
     font-weight: bolder;
-    font-size: 2.2rem;
+    font-size: 1.8rem; /* Smaller font for mobile */
     text-align: center;
-    padding: 40px 0;
-    margin-bottom: 30px;
+    padding: 20px 0;
+    margin-bottom: 20px;
 }
 
 .card-front h3 {
     color: #043a3a;
-    font-size: 1.5rem;
+    font-size: 1.2rem; /* Smaller font for mobile */
     font-weight: 600;
     margin: 0;
 }
 
 .card-back p {
     color: #043a3a;
-    font-size: 1.1rem;
+    font-size: 0.9rem; /* Smaller font for mobile */
     line-height: 1.6;
 }
 
@@ -175,7 +218,7 @@ nav a.active {
 }
 
 .swiper-slide img {
-    max-width: 100px;
+    max-width: 80px; /* Smaller images for mobile */
     height: auto;
     filter: grayscale(0%);
     opacity: 1;
@@ -190,29 +233,29 @@ nav a.active {
 
 /* Features Section */
 #features {
-    padding: 4rem 2rem;
+    padding: 2rem 1rem; /* Reduced padding for mobile */
     background-color: #043a3a;
-    margin-top: 7rem;
+    margin-top: 4rem; /* Adjusted for fixed header */
 }
 
 .heading-inverse {
     color: #fdffff;
     font-weight: bolder;
-    font-size: 2.2rem;
+    font-size: 1.8rem; /* Smaller font for mobile */
     text-align: center;
-    padding: 20px 0;
+    padding: 10px 0;
     margin-bottom: 10px;
 }
 
 .feature-container {
     border: 2px solid #043a3a;
     display: grid;
-    grid-template-columns: repeat(3, 1fr); 
-    grid-auto-rows: 200px;
-    gap: 2.5rem;
-    max-width: 1200px;
+    grid-template-columns: 1fr; /* Single column for mobile */
+    grid-auto-rows: 150px; /* Smaller rows for mobile */
+    gap: 1rem; /* Reduced gap for mobile */
+    max-width: 100%; /* Full width for mobile */
     margin: 0 auto;
-    padding: 2rem;
+    padding: 1rem; /* Reduced padding for mobile */
 }
 
 .feature-card{
@@ -223,9 +266,9 @@ nav a.active {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 0 20px;
+    padding: 15px; /* Reduced padding for mobile */
     font-weight: bold;
-    font-size: 1.2rem;
+    font-size: 1rem; /* Smaller font for mobile */
 }
 
 .feature-card-wide{
@@ -236,83 +279,83 @@ nav a.active {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 0 20px;
+    padding: 15px; /* Reduced padding for mobile */
     font-weight: bold;
-    font-size: 1.2rem;
-    grid-row: span 2;
+    font-size: 1rem; /* Smaller font for mobile */
+    grid-row: span 1; /* Single row for mobile */
 }
 
 .feature-card h3{
     color: #043a3a;
     font-weight: bolder;
-    font-size: 1.5rem;
+    font-size: 1.2rem; /* Smaller font for mobile */
     text-align: center;
 }
 .feature-card h3 i{
-    padding: 0 7px;
+    padding: 0 5px;
 
 }
 
 .feature-card-wide h3{
     color: #043a3a;
     font-weight: bolder;
-    font-size: 2rem;
+    font-size: 1.4rem; /* Smaller font for mobile */
     text-align: center;
 }
 .feature-card-wide h3 i{
-    padding: 0 7px;
+    padding: 0 5px;
 
 }
 
 .feature-card p{
     color: #043a3a;
     font-weight: bolder;
-    font-size: 1rem;
+    font-size: 0.9rem; /* Smaller font for mobile */
     text-align: center;
-    padding: 20px 0;
+    padding: 10px 0; /* Reduced padding for mobile */
 }
 
 .feature-card-wide p{
     color: #043a3a;
     font-weight: bolder;
-    font-size: 1.5rem;
+    font-size: 1rem; /* Smaller font for mobile */
     text-align: center;
-    padding: 20px 0;
+    padding: 10px 0; /* Reduced padding for mobile */
 }
 
 
- /* SECTION */
+/* SECTION */
 
 #collection {
-    padding: 3rem 1.5rem;
+    padding: 2rem 1rem; /* Reduced padding for mobile */
 }
 
 .product-grid {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 1.5rem;
-    max-width: 95%;
+    gap: 1rem; /* Reduced gap for mobile */
+    max-width: 100%; /* Full width for mobile */
     margin: 0 auto;
-    padding: 0 1rem;
+    padding: 0 0.5rem; /* Reduced padding for mobile */
 }
 
 .product {
     border: 2px solid #043a3a;
-    flex: 1 1 calc(25% - 20px); 
+    flex: 1 1 calc(50% - 10px); /* 2 columns for mobile */
     display: flex;
     flex-direction: column;
     align-items: center;
     background: #ffffff;
     border-radius: 12px;
-    box-shadow: 0 8px 22px rgba(4, 58, 58, 0.06);
+    box-shadow: 0 4px 12px rgba(4, 58, 58, 0.06); /* Reduced shadow for mobile */
     transition: transform 0.22s ease, box-shadow 0.22s ease;
-    min-height: 200px;
+    min-height: 180px; /* Reduced height for mobile */
 }
 
 .product img {
     width: 100%;
-    height: 140px;
+    height: 120px; /* Smaller images for mobile */
     object-fit: cover;
     border-radius: 10px;
     flex-shrink: 0;
@@ -321,48 +364,50 @@ nav a.active {
 .product h3 {
     margin: 0 0 0.25rem 0;
     color: #043a3a;
-    font-size: 1.15rem;
+    font-size: 1rem; /* Smaller font for mobile */
 
 }
 
 .product p {
     margin: auto;
     color: #556;
-    font-size: 0.98rem;
-    padding: .5rem 1rem;
+    font-size: 0.85rem; /* Smaller font for mobile */
+    padding: .5rem 0.5rem; /* Reduced padding for mobile */
 }
 
 .product .price {
     margin: auto;
     font-weight: 700;
     color: #036e6e;
-    font-size: 1.05rem;
+    font-size: 0.95rem; /* Smaller font for mobile */
 }
 
 .product button {
     background: #043a3a;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem; /* Reduced margin for mobile */
     color: #fff;
     border: none;
-    padding: 0.75rem 0.9rem;
+    padding: 10px 15px; /* Touch-friendly padding */
     border-radius: 8px;
     cursor: pointer;
     transition: background 0.18s ease, transform 0.18s ease;
+    font-size: 0.9rem; /* Smaller font for mobile */
+    min-height: 44px; /* Touch-friendly minimum height */
 }
 
 .product:hover {
-    transform: translateY(-6px) scale(1.01);
-    box-shadow: 0 18px 40px rgba(4, 58, 58, 0.12);
+    transform: translateY(-3px) scale(1.01); /* Reduced transform for mobile */
+    box-shadow: 0 8px 20px rgba(4, 58, 58, 0.12); /* Reduced shadow for mobile */
 }
 
 .product button:hover {
     background: #036e6e;
-    transform: translateY(-2px);
+    transform: translateY(-1px); /* Reduced transform for mobile */
 }
 
 /* Contact Form Section */
 #contact {
-    padding: 5rem 2rem;
+    padding: 3rem 1rem; /* Reduced padding for mobile */
     background: #e4f7f4;
     color: #043a3a;
 }
@@ -370,30 +415,31 @@ nav a.active {
 #contact h2 {
     text-align: center;
     margin-bottom: 1rem;
-    font-size: 2.2rem;
+    font-size: 1.8rem; /* Smaller font for mobile */
     color: #043a3a;
 }
 
 #contact > p {
     text-align: center;
-    max-width: 600px;
-    margin: 0 auto 3rem;
+    max-width: 100%; /* Full width for mobile */
+    margin: 0 auto 2rem; /* Reduced margin for mobile */
     color: #043a3a;
     line-height: 1.6;
+    font-size: 0.9rem; /* Smaller font for mobile */
 }
 
 .contact-container {
-    max-width: 1200px;
+    max-width: 100%; /* Full width for mobile */
     margin: 0 auto;
     display: flex;
-    flex-direction: row;
-    gap: 2rem;
+    flex-direction: column; /* Stack vertically on mobile */
+    gap: 1rem; /* Reduced gap for mobile */
 }
 
 .contact-container  img{
-    width: 40%;
+    width: 100%; /* Full width for mobile */
     margin: auto;
-    height: 60%;
+    height: 200px; /* Fixed height for mobile */
     object-fit: cover;
     flex-shrink: 0;
 
@@ -403,28 +449,30 @@ nav a.active {
     display: flex;
     flex: 1;
     flex-direction: column;
-    padding: 2rem;
+    padding: 1.5rem; /* Reduced padding for mobile */
     background: #ffffff;
     border-radius: 15px;
-    box-shadow: 0 8px 32px rgba(4, 58, 58, 0.08);
+    box-shadow: 0 4px 16px rgba(4, 58, 58, 0.08); /* Reduced shadow for mobile */
 }
 
 #contact-form label {
     color: #043a3a;
     font-family: 'Merriweather', serif;
-    font-size: 0.9rem;
+    font-size: 0.85rem; /* Smaller font for mobile */
 }
 
 #contact-form input,
 #contact-form textarea {
     width: 100%;
-    padding: 0.8rem 1rem;
+    padding: 12px 15px; /* Touch-friendly padding */
     border: 2px solid #e4f7f4;
     border-radius: 8px;
     background: #ffffff;
     color: #043a3a;
     font-family: 'Merriweather', serif;
     transition: all 0.3s ease;
+    font-size: 0.9rem; /* Smaller font for mobile */
+    min-height: 44px; /* Touch-friendly minimum height */
 }
 
 #contact-form input:focus,
@@ -435,20 +483,21 @@ nav a.active {
 }
 
 #contact-form textarea {
-    min-height: 120px;
+    min-height: 100px; /* Reduced height for mobile */
 }
 
 #contact-form button {
     width: 100%;
-    padding: 1rem;
+    padding: 15px; /* Touch-friendly padding */
     border: none;
     border-radius: 8px;
     background: #043a3a;
     color: #fff;
     font-weight: bold;
-    font-size: 1rem;
+    font-size: 1rem; /* Smaller font for mobile */
     cursor: pointer;
     transition: all 0.3s ease;
+    min-height: 44px; /* Touch-friendly minimum height */
 }
 
 #contact-form button:hover {
@@ -466,19 +515,19 @@ nav a.active {
 
 /* Footer Section */
 footer {
-    padding: 3rem 2rem;
+    padding: 2rem 1rem; /* Reduced padding for mobile */
     background: linear-gradient(135deg, #043a3a 0%, #036e6e 100%);
     color: #fff;
     text-align: center;
 }
 
 footer p {
-    margin-bottom: 1.5rem;
-    font-size: 0.95rem;
+    margin-bottom: 1rem; /* Reduced margin for mobile */
+    font-size: 0.9rem; /* Smaller font for mobile */
 }
 
 .socials {
-    margin: 2rem 0;
+    margin: 1rem 0; /* Reduced margin for mobile */
 }
 
 .socials a {
@@ -487,6 +536,7 @@ footer p {
     margin: 0 0.5rem;
     font-weight: 500;
     transition: color 0.3s ease;
+    font-size: 0.9rem; /* Smaller font for mobile */
 }
 
 .socials a:hover {
@@ -496,16 +546,16 @@ footer p {
 .mode-toggle button {
     background: transparent;
     border: 2px solid #fff;
-    padding: 0.5rem 1rem;
+    padding: 10px 15px; /* Touch-friendly padding */
     border-radius: 20px;
     cursor: pointer;
     color: #fff;
-    font-size: 0.9rem;
+    font-size: 0.85rem; /* Smaller font for mobile */
     transition: all 0.3s ease;
+    min-height: 44px; /* Touch-friendly minimum height */
 }
 
 .mode-toggle button:hover {
     background: #fff;
     color: #043a3a;
 }
-

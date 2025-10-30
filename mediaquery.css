@@ -1,0 +1,341 @@
+/* Tablet Styles (768px and up) */
+@media (min-width: 768px) {
+  body {
+    font-size: 16px; /* Slightly larger base font for tablets */
+  }
+
+  .hero-image {
+    padding: 0 50px; /* Increased padding for tablets */
+  }
+
+  .hero-image h1 {
+    font-size: 36px; /* Larger heading for tablets */
+  }
+
+  .hero-image p {
+    font-size: 18px; /* Larger paragraph for tablets */
+  }
+
+  .hero-image button {
+    padding: 14px 28px; /* Larger buttons for tablets */
+  }
+
+  header {
+    padding: 15px 25px; /* Increased padding for tablets */
+  }
+
+  nav ul {
+    position: static; /* Reset position for tablets */
+    display: flex;
+    flex-direction: row; /* Horizontal layout for tablets */
+    background: transparent; /* Remove background for tablets */
+    transform: none; /* Reset transform for tablets */
+    opacity: 1; /* Reset opacity for tablets */
+    visibility: visible; /* Reset visibility for tablets */
+    gap: 25px; /* Increased gap for tablets */
+  }
+
+  nav a {
+    font-size: 18px; /* Larger font for tablets */
+    padding: 8px 12px; /* Added padding for tablets */
+  }
+
+  .logo {
+    font-size: 22px; /* Larger logo for tablets */
+  }
+
+  .hamburger {
+    display: none; /* Hide hamburger on tablets */
+  }
+
+  .cart-btn i {
+    font-size: 22px; /* Larger cart icon for tablets */
+    padding: 10px;
+  }
+
+  .heading {
+    font-size: 2.5rem; /* Larger heading for tablets */
+    padding: 50px 0;
+    margin-bottom: 40px;
+  }
+
+  .heading-inverse {
+    font-size: 2.5rem; /* Larger heading for tablets */
+  }
+
+  .feature-container {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns for tablets */
+    gap: 2rem; /* Increased gap for tablets */
+    padding: 2.5rem; /* Increased padding for tablets */
+  }
+
+  .feature-card {
+    font-size: 1.1rem; /* Larger font for tablets */
+  }
+
+  .feature-card-wide {
+    grid-row: span 1; /* Single row for tablets */
+  }
+
+  .feature-card h3 {
+    font-size: 1.4rem; /* Larger heading for tablets */
+  }
+
+  .feature-card-wide h3 {
+    font-size: 1.8rem; /* Larger heading for tablets */
+  }
+
+  .feature-card p {
+    font-size: 0.95rem; /* Larger paragraph for tablets */
+  }
+
+  .feature-card-wide p {
+    font-size: 1.1rem; /* Larger paragraph for tablets */
+  }
+
+  #collection {
+    padding: 3rem 2rem; /* Increased padding for tablets */
+  }
+
+  .product-grid {
+    gap: 2rem; /* Increased gap for tablets */
+    padding: 0 2rem; /* Increased padding for tablets */
+  }
+
+  .product {
+    flex: 1 1 calc(33.333% - 20px); /* 3 columns for tablets */
+    min-height: 220px; /* Increased height for tablets */
+  }
+
+  .product img {
+    height: 160px; /* Larger images for tablets */
+  }
+
+  .product h3 {
+    font-size: 1.1rem; /* Larger heading for tablets */
+  }
+
+  .product p {
+    font-size: 0.9rem; /* Larger paragraph for tablets */
+  }
+
+  .product .price {
+    font-size: 1.1rem; /* Larger price for tablets */
+  }
+
+  .product button {
+    padding: 12px 18px; /* Larger buttons for tablets */
+    font-size: 0.95rem; /* Larger font for tablets */
+  }
+
+  #contact {
+    padding: 4rem 2rem; /* Increased padding for tablets */
+  }
+
+  #contact h2 {
+    font-size: 2rem; /* Larger heading for tablets */
+  }
+
+  #contact > p {
+    font-size: 1rem; /* Larger paragraph for tablets */
+    margin: 0 auto 3rem; /* Increased margin for tablets */
+  }
+
+  .contact-container {
+    flex-direction: row; /* Horizontal layout for tablets */
+    gap: 2rem; /* Increased gap for tablets */
+  }
+
+  .contact-container img {
+    width: 45%; /* Adjusted width for tablets */
+    height: auto; /* Auto height for tablets */
+  }
+
+  #contact-form {
+    padding: 2.5rem; /* Increased padding for tablets */
+  }
+
+  footer {
+    padding: 3.5rem 2rem; /* Increased padding for tablets */
+  }
+
+  footer p {
+    font-size: 1rem; /* Larger font for tablets */
+  }
+
+  .socials a {
+    font-size: 0.95rem; /* Larger font for tablets */
+  }
+
+  .mode-toggle button {
+    padding: 12px 18px; /* Larger button for tablets */
+    font-size: 0.9rem; /* Larger font for tablets */
+  }
+}
+
+/* Desktop Styles (1024px and up) */
+@media (min-width: 1024px) {
+  body {
+    font-size: 16px; /* Standard base font for desktops */
+  }
+
+  .hero-image {
+    padding: 0 100px; /* Full padding for desktops */
+  }
+
+  .hero-image h1 {
+    font-size: 50px; /* Full heading size for desktops */
+  }
+
+  .hero-image p {
+    font-size: 20px; /* Full paragraph size for desktops */
+  }
+
+  .hero-image button {
+    padding: 15px 30px; /* Full button size for desktops */
+  }
+
+  header {
+    width: 90%; /* Adjusted width for desktops */
+    margin: 0 auto;
+    padding: 20px 30px; /* Increased padding for desktops */
+    border-radius: 15px; /* Added border radius for desktops */
+  }
+
+  nav a {
+    font-size: 20px; /* Full font size for desktops */
+    padding: 10px 15px; /* Increased padding for desktops */
+  }
+
+  .logo {
+    font-size: 24px; /* Larger logo for desktops */
+  }
+
+  .cart-btn i {
+    font-size: 24px; /* Larger cart icon for desktops */
+    padding: 12px;
+  }
+
+  .heading {
+    font-size: 2.8rem; /* Larger heading for desktops */
+    padding: 60px 0;
+    margin-bottom: 50px;
+  }
+
+  .heading-inverse {
+    font-size: 2.8rem; /* Larger heading for desktops */
+  }
+
+  .feature-container {
+    grid-template-columns: repeat(3, 1fr); /* 3 columns for desktops */
+    gap: 2.5rem; /* Increased gap for desktops */
+    padding: 3rem; /* Increased padding for desktops */
+    max-width: 1200px; /* Max width for desktops */
+  }
+
+  .feature-card-wide {
+    grid-row: span 2; /* Span 2 rows for desktops */
+  }
+
+  .feature-card h3 {
+    font-size: 1.5rem; /* Full heading size for desktops */
+  }
+
+  .feature-card-wide h3 {
+    font-size: 2rem; /* Full heading size for desktops */
+  }
+
+  .feature-card p {
+    font-size: 1rem; /* Full paragraph size for desktops */
+  }
+
+  .feature-card-wide p {
+    font-size: 1.5rem; /* Full paragraph size for desktops */
+  }
+
+  #collection {
+    padding: 4rem 2rem; /* Increased padding for desktops */
+  }
+
+  .product-grid {
+    gap: 2.5rem; /* Increased gap for desktops */
+    padding: 0 2rem; /* Increased padding for desktops */
+    max-width: 100%; /* Full width for desktops */
+  }
+
+  .product {
+    flex: 1 1 calc(25% - 25px); /* 4 columns for desktops */
+    min-height: 250px; /* Increased height for desktops */
+  }
+
+  .product img {
+    height: 180px; /* Larger images for desktops */
+  }
+
+  .product h3 {
+    font-size: 1.15rem; /* Full heading size for desktops */
+  }
+
+  .product p {
+    font-size: 0.98rem; /* Full paragraph size for desktops */
+  }
+
+  .product .price {
+    font-size: 1.05rem; /* Full price size for desktops */
+  }
+
+  .product button {
+    padding: 12px 20px; /* Full button size for desktops */
+    font-size: 1rem; /* Full font size for desktops */
+  }
+
+  #contact {
+    padding: 5rem 2rem; /* Full padding for desktops */
+  }
+
+  #contact h2 {
+    font-size: 2.2rem; /* Full heading size for desktops */
+  }
+
+  #contact > p {
+    font-size: 1rem; /* Full paragraph size for desktops */
+  }
+
+  .contact-container {
+    gap: 3rem; /* Increased gap for desktops */
+  }
+
+  .contact-container img {
+    width: 40%; /* Adjusted width for desktops */
+  }
+
+  #contact-form {
+    padding: 3rem; /* Increased padding for desktops */
+  }
+
+  footer {
+    padding: 4rem 2rem; /* Increased padding for desktops */
+  }
+
+  footer p {
+    font-size: 0.95rem; /* Full font size for desktops */
+  }
+
+  .socials a {
+    font-size: 0.95rem; /* Full font size for desktops */
+  }
+
+  .mode-toggle button {
+    padding: 12px 20px; /* Full button size for desktops */
+    font-size: 0.9rem; /* Full font size for desktops */
+  }
+
+  .brandSwiper {
+    width: 90%; /* Adjusted width for desktops */
+    margin: 0 auto; /* Center for desktops */
+  }
+
+  .swiper-slide img {
+    max-width: 120px; /* Larger images for desktops */
+  }
+}

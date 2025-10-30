@@ -1,5 +1,28 @@
 
   document.addEventListener('DOMContentLoaded', function() {
+  // Hamburger menu toggle
+  const hamburger = document.querySelector('.hamburger');
+  const navUl = document.querySelector('nav ul');
+
+  hamburger.addEventListener('click', function() {
+    navUl.classList.toggle('show');
+  });
+
+  // Close menu when clicking on a link
+  const navLinks = document.querySelectorAll('nav a');
+  navLinks.forEach(link => {
+    link.addEventListener('click', function() {
+      navUl.classList.remove('show');
+    });
+  });
+
+  // Close menu when clicking outside
+  document.addEventListener('click', function(event) {
+    if (!hamburger.contains(event.target) && !navUl.contains(event.target)) {
+      navUl.classList.remove('show');
+    }
+  });
+
   const swiper = new Swiper('.brandSwiper', {
     slidesPerView: 'auto',
     spaceBetween: 30,
@@ -27,3 +50,8 @@
   });
 });
 
+{/* <script type="speculationrules">
+{
+  "prerender": [{ "source": "document", "eagerness": "moderate" }]
+}
+</script> */}
