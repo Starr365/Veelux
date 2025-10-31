@@ -44,6 +44,7 @@
             <li class="mobile-cart">
               <a href="#" class="cart-btn">
                 <i class="fas fa-shopping-cart"></i>
+                <div class="cart-count" aria-hidden="true">0</div>
               </a>
             </li>
         </ul>
@@ -165,11 +166,25 @@
       </div>
     </div>
 
-    <!-- Cart Modal Placeholder -->
-    <div id="cart-modal" style="display:none;">
-      <h3>Your Cart</h3>
-      <div id="cart-items"></div>
-      <button id="checkout-btn">Checkout</button>
+    <div class="checkout-action">
+      <button id="checkout-btn" class="btn primary">Checkout</button>
+    </div>
+
+    <!-- Cart Modal -->
+    <div id="cart-modal" class="cart-overlay" aria-hidden="true">
+      <div class="cart-panel" role="dialog" aria-modal="true" aria-label="Shopping cart">
+        <section class="cart-panel-header">
+          <h3>Your Cart</h3>
+          <button id="cart-close" aria-label="Close cart">&times;</button>
+        </section>
+        <div id="cart-items" class="cart-items"></div>
+        <div class="cart-summary">
+          <div class="cart-total">Total: ₦<span id="cart-total">0</span></div>
+          <div class="cart-actions">
+            <button id="checkout-btn" class="btn primary">Checkout</button>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -181,7 +196,9 @@
     </p>
     <div class="contact-container">
       <img src="images/girl and watch.jpg" alt="Contact Image">
-      <form id="contact-form">
+      <form id="contact-form" action="https://api.web3forms.com/submit" method="POST">
+      <input type="hidden" name="access_key" value="13914b1b-e8f1-4952-b4dd-e0db97be5947">
+      
       <label for="name">Name:</label><br>
       <input type="text" id="name" name="name" required><br>
 
@@ -206,13 +223,10 @@
     <p>© 2025 Veelux Watches. All Rights Reserved.</p>
     <div class="socials">
       <p>Follow us on:
-        <a href="#">Instagram</a> |
-        <a href="#">Facebook</a> |
-        <a href="#">TikTok</a>
+        <a href="https://github.com/Starr365/Veelux" target="_blank">Instagram</a> |
+        <a href="https://github.com/Starr365/Veelux" target="_blank">Facebook</a> |
+        <a href="https://github.com/Starr365/Veelux" target="_blank">TikTok</a>
       </p>
-    </div>
-    <div class="mode-toggle">
-      <button id="theme-toggle">🌙 / ☀️</button>
     </div>
   </footer>
 </body>
