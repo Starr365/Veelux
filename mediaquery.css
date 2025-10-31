@@ -1,341 +1,347 @@
 /* Tablet Styles (768px and up) */
 @media (min-width: 768px) {
   body {
-    font-size: 16px; /* Slightly larger base font for tablets */
+    font-size: 16px; 
   }
-
   .hero-image {
-    padding: 0 50px; /* Increased padding for tablets */
+    padding: 0 50px; 
   }
 
   .hero-image h1 {
-    font-size: 36px; /* Larger heading for tablets */
+    font-size: 36px; 
   }
 
   .hero-image p {
-    font-size: 18px; /* Larger paragraph for tablets */
+    font-size: 18px; 
   }
 
   .hero-image button {
-    padding: 14px 28px; /* Larger buttons for tablets */
+    padding: 14px 28px; 
   }
 
   header {
-    padding: 15px 25px; /* Increased padding for tablets */
+    max-width: 90%; 
+    margin: 0 auto;
+    border-radius: 15px; 
+    gap: 20px;
   }
 
   nav ul {
-    position: static; /* Reset position for tablets */
+    position: static; 
     display: flex;
-    flex-direction: row; /* Horizontal layout for tablets */
-    background: transparent; /* Remove background for tablets */
-    transform: none; /* Reset transform for tablets */
-    opacity: 1; /* Reset opacity for tablets */
-    visibility: visible; /* Reset visibility for tablets */
-    gap: 25px; /* Increased gap for tablets */
+    flex-direction: row; 
+    background: none; 
+    backdrop-filter: none;
+    transform: none;
+    opacity: 1; 
+    visibility: visible; 
+    height: fit-content;
+  } 
+  nav ul li{
+    height: fit-content;
   }
+  nav ul li a {
+    font-size: 18px; 
 
-  nav a {
-    font-size: 18px; /* Larger font for tablets */
-    padding: 8px 12px; /* Added padding for tablets */
   }
+  .cart-btn {
+    display: inline;
+    font-size: xx-large;
 
-  .logo {
-    font-size: 22px; /* Larger logo for tablets */
   }
 
   .hamburger {
-    display: none; /* Hide hamburger on tablets */
-  }
-
-  .cart-btn i {
-    font-size: 22px; /* Larger cart icon for tablets */
-    padding: 10px;
+    display: none; 
   }
 
   .heading {
-    font-size: 2.5rem; /* Larger heading for tablets */
+    font-size: 2.5rem; 
     padding: 50px 0;
     margin-bottom: 40px;
   }
 
   .heading-inverse {
-    font-size: 2.5rem; /* Larger heading for tablets */
+    font-size: 2.5rem;
   }
 
   .feature-container {
-    grid-template-columns: repeat(2, 1fr); /* 2 columns for tablets */
-    gap: 2rem; /* Increased gap for tablets */
-    padding: 2.5rem; /* Increased padding for tablets */
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 2rem; 
+    padding: 2.5rem;
   }
 
   .feature-card {
-    font-size: 1.1rem; /* Larger font for tablets */
+    font-size: 1.1rem; 
   }
 
   .feature-card-wide {
-    grid-row: span 1; /* Single row for tablets */
+    grid-row: span 1; 
   }
 
   .feature-card h3 {
-    font-size: 1.4rem; /* Larger heading for tablets */
+    font-size: 1.4rem; 
   }
 
   .feature-card-wide h3 {
-    font-size: 1.8rem; /* Larger heading for tablets */
+    font-size: 1.2rem; 
   }
 
   .feature-card p {
-    font-size: 0.95rem; /* Larger paragraph for tablets */
+    font-size: 0.95rem; 
   }
 
   .feature-card-wide p {
-    font-size: 1.1rem; /* Larger paragraph for tablets */
-  }
-
-  #collection {
-    padding: 3rem 2rem; /* Increased padding for tablets */
+    font-size: 1.1rem; 
   }
 
   .product-grid {
-    gap: 2rem; /* Increased gap for tablets */
-    padding: 0 2rem; /* Increased padding for tablets */
+    gap: 2rem; 
+    padding: 0 2rem; 
   }
 
   .product {
-    flex: 1 1 calc(33.333% - 20px); /* 3 columns for tablets */
-    min-height: 220px; /* Increased height for tablets */
+    flex: 1 1 calc(33.333% - 20px); 
+    min-height: 220px; 
   }
 
   .product img {
-    height: 160px; /* Larger images for tablets */
+    height: 160px; 
   }
 
   .product h3 {
-    font-size: 1.1rem; /* Larger heading for tablets */
+    font-size: 1.1rem; 
   }
 
   .product p {
-    font-size: 0.9rem; /* Larger paragraph for tablets */
+    font-size: 0.9rem; 
   }
 
   .product .price {
-    font-size: 1.1rem; /* Larger price for tablets */
-  }
+    font-size: 1.1rem; 
 
   .product button {
-    padding: 12px 18px; /* Larger buttons for tablets */
-    font-size: 0.95rem; /* Larger font for tablets */
+    padding: 12px 18px; 
+    font-size: 0.95rem;
   }
 
   #contact {
-    padding: 4rem 2rem; /* Increased padding for tablets */
+    padding: 4rem 2rem; 
   }
 
   #contact h2 {
-    font-size: 2rem; /* Larger heading for tablets */
+    font-size: 2rem; 
   }
 
   #contact > p {
-    font-size: 1rem; /* Larger paragraph for tablets */
-    margin: 0 auto 3rem; /* Increased margin for tablets */
+    font-size: 1rem; 
+    margin: 0 auto 3rem; 
   }
 
   .contact-container {
-    flex-direction: row; /* Horizontal layout for tablets */
-    gap: 2rem; /* Increased gap for tablets */
+    flex-direction: row; 
+    gap: 2rem; 
   }
 
   .contact-container img {
-    width: 45%; /* Adjusted width for tablets */
-    height: auto; /* Auto height for tablets */
+    width: 45%; 
+    height: auto; 
   }
 
   #contact-form {
-    padding: 2.5rem; /* Increased padding for tablets */
+    padding: 2.5rem; 
   }
 
   footer {
-    padding: 3.5rem 2rem; /* Increased padding for tablets */
+    padding: 3.5rem 2rem; 
   }
 
   footer p {
-    font-size: 1rem; /* Larger font for tablets */
+    font-size: 1rem; 
   }
 
   .socials a {
-    font-size: 0.95rem; /* Larger font for tablets */
+    font-size: 0.95rem; 
   }
 
   .mode-toggle button {
-    padding: 12px 18px; /* Larger button for tablets */
-    font-size: 0.9rem; /* Larger font for tablets */
+    padding: 12px 18px; 
+    font-size: 0.9rem; 
   }
 }
 
 /* Desktop Styles (1024px and up) */
 @media (min-width: 1024px) {
   body {
-    font-size: 16px; /* Standard base font for desktops */
+    font-size: 16px; 
   }
 
   .hero-image {
-    padding: 0 100px; /* Full padding for desktops */
+    padding: 0 100px; 
   }
 
   .hero-image h1 {
-    font-size: 50px; /* Full heading size for desktops */
+    font-size: 50px; 
   }
 
   .hero-image p {
-    font-size: 20px; /* Full paragraph size for desktops */
+    font-size: 20px; 
   }
 
   .hero-image button {
-    padding: 15px 30px; /* Full button size for desktops */
+    padding: 15px 30px; 
   }
 
   header {
-    width: 90%; /* Adjusted width for desktops */
+    width: 90%; 
+    max-width: 1200px;
     margin: 0 auto;
-    padding: 20px 30px; /* Increased padding for desktops */
-    border-radius: 15px; /* Added border radius for desktops */
+    padding: 10px 30px; 
+    border-radius: 15px; 
+
   }
 
   nav a {
-    font-size: 20px; /* Full font size for desktops */
-    padding: 10px 15px; /* Increased padding for desktops */
+    font-size: 20px; 
+    padding: 10px 15px; 
+    font-size: bolder;
   }
 
   .logo {
-    font-size: 24px; /* Larger logo for desktops */
+    font-size: 24px; 
   }
 
   .cart-btn i {
-    font-size: 24px; /* Larger cart icon for desktops */
-    padding: 12px;
+    font-size: 20px;
   }
 
   .heading {
-    font-size: 2.8rem; /* Larger heading for desktops */
+    font-size: 2.8rem; 
     padding: 60px 0;
     margin-bottom: 50px;
   }
 
   .heading-inverse {
-    font-size: 2.8rem; /* Larger heading for desktops */
+    font-size: 2.8rem; 
   }
-
-  .feature-container {
-    grid-template-columns: repeat(3, 1fr); /* 3 columns for desktops */
-    gap: 2.5rem; /* Increased gap for desktops */
-    padding: 3rem; /* Increased padding for desktops */
-    max-width: 1200px; /* Max width for desktops */
-  }
-
-  .feature-card-wide {
-    grid-row: span 2; /* Span 2 rows for desktops */
-  }
-
-  .feature-card h3 {
-    font-size: 1.5rem; /* Full heading size for desktops */
-  }
-
-  .feature-card-wide h3 {
-    font-size: 2rem; /* Full heading size for desktops */
-  }
-
-  .feature-card p {
-    font-size: 1rem; /* Full paragraph size for desktops */
-  }
-
-  .feature-card-wide p {
-    font-size: 1.5rem; /* Full paragraph size for desktops */
-  }
-
-  #collection {
-    padding: 4rem 2rem; /* Increased padding for desktops */
-  }
-
-  .product-grid {
-    gap: 2.5rem; /* Increased gap for desktops */
-    padding: 0 2rem; /* Increased padding for desktops */
-    max-width: 100%; /* Full width for desktops */
-  }
-
-  .product {
-    flex: 1 1 calc(25% - 25px); /* 4 columns for desktops */
-    min-height: 250px; /* Increased height for desktops */
-  }
-
-  .product img {
-    height: 180px; /* Larger images for desktops */
-  }
-
-  .product h3 {
-    font-size: 1.15rem; /* Full heading size for desktops */
-  }
-
-  .product p {
-    font-size: 0.98rem; /* Full paragraph size for desktops */
-  }
-
-  .product .price {
-    font-size: 1.05rem; /* Full price size for desktops */
-  }
-
-  .product button {
-    padding: 12px 20px; /* Full button size for desktops */
-    font-size: 1rem; /* Full font size for desktops */
-  }
-
-  #contact {
-    padding: 5rem 2rem; /* Full padding for desktops */
-  }
-
-  #contact h2 {
-    font-size: 2.2rem; /* Full heading size for desktops */
-  }
-
-  #contact > p {
-    font-size: 1rem; /* Full paragraph size for desktops */
-  }
-
-  .contact-container {
-    gap: 3rem; /* Increased gap for desktops */
-  }
-
-  .contact-container img {
-    width: 40%; /* Adjusted width for desktops */
-  }
-
-  #contact-form {
-    padding: 3rem; /* Increased padding for desktops */
-  }
-
-  footer {
-    padding: 4rem 2rem; /* Increased padding for desktops */
-  }
-
-  footer p {
-    font-size: 0.95rem; /* Full font size for desktops */
-  }
-
-  .socials a {
-    font-size: 0.95rem; /* Full font size for desktops */
-  }
-
-  .mode-toggle button {
-    padding: 12px 20px; /* Full button size for desktops */
-    font-size: 0.9rem; /* Full font size for desktops */
-  }
-
-  .brandSwiper {
-    width: 90%; /* Adjusted width for desktops */
-    margin: 0 auto; /* Center for desktops */
+    .brandSwiper {
+    width: 90%; 
+    margin: 0 auto; 
   }
 
   .swiper-slide img {
-    max-width: 120px; /* Larger images for desktops */
+    max-width: 120px; 
   }
+
+  .feature-container {
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 2.5rem; 
+    padding: 3rem; 
+    max-width: 1200px; 
+  }
+
+  .feature-card-wide {
+    grid-row: span 2; 
+  }
+
+  .feature-card h3 {
+    font-size: 1.5rem; 
+  }
+
+  .feature-card-wide h3 {
+    font-size: 2rem; 
+  }
+
+  .feature-card p {
+    font-size: 1rem; 
+  }
+
+  .feature-card-wide p {
+    font-size: 1.5rem;
+  }
+
+  #collection {
+    padding: 4rem 2rem; 
+  }
+
+  .product-grid {
+    max-width: 1200px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    grid-template-rows: repeat(2, auto);  
+    gap: 20px;
+    padding: 0 2rem; 
+ 
+  }
+
+  .product {
+    
+    min-height: 250px; 
+  }
+
+  .product img {
+    height: 180px; 
+  }
+
+  .product h3 {
+    font-size: 1.15rem; 
+  }
+
+  .product p {
+    font-size: 0.98rem; 
+  }
+
+  .product .price {
+    font-size: 1.05rem; 
+  }
+
+  .product button {
+    padding: 12px 20px; 
+    font-size: 1rem; 
+  }
+
+  #contact {
+    padding: 5rem 2rem; 
+  }
+
+  #contact h2 {
+    font-size: 2.2rem; 
+  }
+
+  #contact > p {
+    font-size: 1rem; 
+  }
+
+  .contact-container {
+    display: flex;
+    flex-direction: row;
+    gap: 3rem; 
+  }
+
+  .contact-container img {
+    width: 40%;
+    height: auto; 
+  }
+
+  #contact-form {
+    padding: 3rem; 
+  }
+
+  footer {
+    padding: 4rem 2rem;
+  }
+
+  footer p {
+    font-size: 0.95rem; 
+  }
+
+  .socials a {
+    font-size: 0.95rem; 
+  }
+
+  .mode-toggle button {
+    padding: 12px 20px; 
+    font-size: 0.9rem; 
+  }
+
+}
 }

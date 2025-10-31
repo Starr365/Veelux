@@ -2,14 +2,16 @@
   document.addEventListener('DOMContentLoaded', function() {
   // Hamburger menu toggle
   const hamburger = document.querySelector('.hamburger');
-  const navUl = document.querySelector('nav ul');
+  const navUl = document.querySelector('nav ul, nav .cart-btn');
 
-  hamburger.addEventListener('click', function() {
+  function toggleMobileMenu() {
     navUl.classList.toggle('show');
-  });
+  }
+
+  hamburger.addEventListener('click', toggleMobileMenu);
 
   // Close menu when clicking on a link
-  const navLinks = document.querySelectorAll('nav a');
+  const navLinks = document.querySelectorAll('nav a, nav .cart-btn');
   navLinks.forEach(link => {
     link.addEventListener('click', function() {
       navUl.classList.remove('show');
@@ -18,7 +20,11 @@
 
   // Close menu when clicking outside
   document.addEventListener('click', function(event) {
-    if (!hamburger.contains(event.target) && !navUl.contains(event.target)) {
+    const isClickInside = navUl.contains(event.target) || 
+                         hamburger.contains(event.target) ||
+                         event.target.closest('.cart-btn');
+    
+    if (!isClickInside) {
       navUl.classList.remove('show');
     }
   });
@@ -50,8 +56,3 @@
   });
 });
 
-{/* <script type="speculationrules">
-{
-  "prerender": [{ "source": "document", "eagerness": "moderate" }]
-}
-</script> */}
