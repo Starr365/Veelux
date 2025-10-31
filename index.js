@@ -162,6 +162,20 @@
     cartModal.setAttribute('aria-hidden', 'false');
   });
 
+  // Product Checkout button
+
+  document.querySelectorAll('#checkout-after-grid').forEach(el => {
+    el.addEventListener('click', function(e){
+      e.preventDefault();
+      updateCartDisplay();
+      cartModal.classList.add('open');
+      cartModal.setAttribute('aria-hidden', 'false');
+      // move focus into the cart for accessibility (optional)
+      const firstFocusable = cartModal.querySelector('.cart-panel button, .cart-panel [href], .cart-panel input');
+      if(firstFocusable) firstFocusable.focus();
+    });
+  });
+
   cartCloseBtn.addEventListener('click', function(){
     cartModal.classList.remove('open');
     cartModal.setAttribute('aria-hidden', 'true');

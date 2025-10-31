@@ -682,7 +682,9 @@ footer p {
 }
 
 .cart-total {
-    font-weight: 800;
+    color: #043a3a;
+    font-size: 1.7rem;
+    font-weight: bolder;
     text-align: right;
     margin-bottom: 8px;
 }
